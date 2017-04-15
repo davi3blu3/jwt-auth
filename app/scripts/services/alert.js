@@ -1,8 +1,9 @@
 'use strict';
 
 angular.module('projectApp')
-  .service('alert', function ($rootScope, $timeout) {
+  .service('alert', function alert($rootScope, $timeout) {
     var alertTimeout;
+    console.log('alert service called');
     return function(type, title, message, timeout) {
       $rootScope.alert = {
         hasBeenShown: true,
