@@ -9,4 +9,4 @@
  * Main module of the application.
  */
 angular
-  .module('projectApp', ['ui-router']);
+  .module('projectApp', ['ui.router']);
