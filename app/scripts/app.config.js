@@ -13,5 +13,5 @@ angular.module('projectApp').config(function($stateProvider, $urlRouterProvider)
     templateUrl: '/views/register.html'
   });
 
-  $urlRouterProvider.otherwise('/views/404.html');
+  $urlRouterProvider.otherwise('/');
 });
