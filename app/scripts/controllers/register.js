@@ -12,11 +12,12 @@ angular.module('projectApp')
       };
 
       $http.post(url, user)
-        .success(function(res) {
+        .then(
+          function successCallback(response){
           console.log('success');
-        })
-        .error(function(err) {
-          console.log('error');
-        })
+          },
+          function errorCallback(error) {
+            alert('warning', 'Oops', 'Could not register!');
+          })
     };
   });

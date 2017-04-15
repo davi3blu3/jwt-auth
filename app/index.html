@@ -9,6 +9,7 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -48,8 +49,12 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" ng-cloak>
       <ui-view></ui-view>
+      <div class="alert alert-{{alert.type}} animated main-alert"
+           ng-class"{'flipInY': alert.show, 'flipOutY': !alert.show', 'alert-hidden': !alert.hasBeenShown}">
+           <strong>{{alert.title}}</strong>{{alert.message}}
+      </div>
     </div>
 
     <div class="footer">
@@ -85,6 +90,7 @@
         <script src="scripts/app.config.js"></script>
         <script src="scripts/directives/sameAs.js"></script>
         <script src="scripts/controllers/register.js"></script>
+        <script src="scripts/services/alert.js"></script>
         <!-- endbuild -->
 </body>
 </html>
