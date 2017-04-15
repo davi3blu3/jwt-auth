@@ -1,6 +1,8 @@
-	<form name="register" class="form-signin">
+	<form ng-submit="submit()" name="register" class="form-signin">
 		<h1 class="form-signin-heading text-muted">Register</h1>
-		<input type="email"
+		<input name="email"
+          ng-model="email"
+          type="email"
           class="form-control"
           placeholder="Email address"
           required>
@@ -12,16 +14,5 @@
           placeholder="Password"
           required>
 
-		<input name="password_confirm"
-          ng-model="password_confirm"
-          type="password"
-          class="form-control"
-          placeholder="Confirm Password"
-          validate-equals="password"
-          required>
-
-      <p class="help-block" ng-show="register.password_confirm.$dirty && register.password_confirmation.$invalid">passwords do not match</p>
-		<button class="btn btn-lg btn-primary btn-block" type="submit">
-			Submit
-		</button>
+		<button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
 	</form>

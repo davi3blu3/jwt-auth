@@ -10,7 +10,8 @@ angular.module('projectApp').config(function($stateProvider, $urlRouterProvider)
 
   .state('register', {
     url: '/register',
-    templateUrl: '/views/register.html'
+    templateUrl: '/views/register.html',
+    controller: 'RegisterCtrl'
   });
 
   $urlRouterProvider.otherwise('/');
